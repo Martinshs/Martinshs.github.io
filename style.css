@@ -67,6 +67,8 @@ aside {
   backdrop-filter: blur(20px);
 }
 
+
+
 .Links {
   display: flex;
   flex-direction: column;
@@ -108,11 +110,6 @@ aside li i {
   color: var(--primary-green);
 }
 
-.mySwiper {
-  flex: 1;
-  height: 100%;
-  background-color: var(--bg-dark-alt);
-}
 
 .home-slide {
   display: flex;
@@ -147,7 +144,7 @@ aside li i {
 
 .bottom-left-corner {
   left: -50px;
-  bottom: 480px;
+  bottom: 1300px;
   rotate: -90deg;
 }
 
@@ -215,11 +212,12 @@ aside li i {
 }
 
 .mySwiper {
-  width: 80vw;
+  width: calc(100% - 280px);
   height: 100vh;
   overflow: hidden;
   background-color: var(--bg-dark-alt);
 }
+
 
 .swiper-slide {
   width: 100%;
@@ -252,6 +250,23 @@ aside li i {
   padding: 10px;
 }
 
+
+.buttonGroup button {
+  background-color: var(--primary-green);
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonGroup button:hover {
+  background-color: #57cc99;
+  color: white;
+}
+
 .heading {
   padding: 20px 10px;
   font-size: 2.5rem;
@@ -264,6 +279,12 @@ aside li i {
   color: var(--primary-green);
 }
 
+.research {
+  color: var(--text-white);
+  padding: 80px;
+}
+
+
 .aboutme-deatils,
 .research-description {
   padding: 10px;
@@ -271,6 +292,17 @@ aside li i {
   line-height: 1.6;
   color: var(--text-light-grey);
 }
+
+
+.research-description a {
+  text-decoration: none;
+  color: var(--primary-green);
+}
+
+.research-description a:hover {
+  text-decoration: underline;
+}
+
 
 .publication-box {
   background-color: var(--bg-black);
@@ -293,6 +325,11 @@ aside li i {
 .publication-list li a:hover {
   text-decoration: underline;
 }
+
+
+
+
+
 
 .gallery {
   display: grid;

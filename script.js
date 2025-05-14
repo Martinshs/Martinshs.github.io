@@ -22,10 +22,6 @@ function Navigate(indx) {
 }
 
 
-function toggleTheme() {
-  document.body.classList.toggle('dark-mode');
-}
-
 
 // Load preference
 if (localStorage.getItem("theme") === "dark") {
