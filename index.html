@@ -1,194 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Martin Hernandez</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="script.js" defer></script>
 </head>
-    <main>
-        <aside>
-            <ul class="Links">
-                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
-                    <p>Home</p>
-                </li>
-                <li onclick="Navigate(1)"><i class="fa-solid fa-user" ></i>
-                    <p>About me</p>
-                </li>
-                <li onclick="Navigate(2)"><i class="fa-solid fa-book"></i>
-                    <p>Research</p>
-                </li>
-							<li onclick="Navigate(3)"><i class="fa-brands fa-github"></i>
-                    <p>Implementations</p>
-                </li>
-                <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
-                    <p>Contact Me</p>
-                </li>
-							<p><button onclick="toggleTheme()" id="theme-toggle" class="theme-button">
-  <i class="fa-solid fa-circle-half-stroke"></i>
-</button>
-    </p>
+<body>
+  <main>
+    <aside>
+      <ul class="Links">
+        <li onclick="Navigate(0)" class="activeLink">
+          <i class="fa-solid fa-house"></i>
+          <p>Home</p>
+        </li>
+        <li onclick="Navigate(1)">
+          <i class="fa-solid fa-user"></i>
+          <p>About me</p>
+        </li>
+        <li onclick="Navigate(2)">
+          <i class="fa-solid fa-book"></i>
+          <p>Research</p>
+        </li>
+        <li onclick="Navigate(3)">
+          <i class="fa-brands fa-github"></i>
+          <p>Implementations</p>
+        </li>
+        <li onclick="Navigate(4)">
+          <i class="fa-solid fa-comments"></i>
+          <p>Contact Me</p>
+        </li>
+        <p>
+          <button onclick="toggleTheme()" id="theme-toggle" class="theme-button">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
+        </p>
+      </ul>
+    </aside>
+
+    <div class="swiper mySwiper">
+      <div class="SlideContainer swiper-wrapper">
+
+        <!-- Home slide -->
+        <div class="swiper-slide home-slide">
+          <div class="HomeContent">
+            <h1>Hi! I'm <span class="stylized-name">Martín</span>,</h1>
+            <h2>Dynamics &bull; <span class="proffesions">Randomness</span> &bull; Learning</h2>
+            <p class="heroline">
+              I’m a PhD candidate at FAU Erlangen–Nürnberg, Germany, working at the
+              intersection of control theory, partial differential equations, and deep
+              learning. My research focuses on randomized algorithms for dynamic systems.
+            </p>
+          </div>
+          <div class="SideImg">
+            <div class="top-right-corner">
+              <hr class="hr1">
+              <hr class="hr2">
+            </div>
+            <img src="https://dcn.nat.fau.eu/wp-content/uploads/martin-hernandez-pic.png" alt="">
+            <div class="bottom-left-corner">
+              <hr class="hr1">
+              <hr class="hr2">
+            </div>
+          </div>
+          <p class="slide-help">
+            Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i>
+          </p>
+        </div>
+
+        <!-- About me slide -->
+        <div class="swiper-slide aboutme">
+          <h1 class="heading">About Me</h1>
+          <h3 class="sub-heading">I'm Martín Hernández Salinas</h3>
+          <div class="aboutme-deatils">
+            I am a mathematician with a strong background in partial differential
+            equations, numerical analysis, and control theory. My academic path began
+            in Chile, where I earned both my engineering and master’s degrees in
+            mathematics at USM under the supervision of Dr. Rodrigo Lecaros and Dr.
+            Sebastián Zamorano. I am currently pursuing my PhD at FAU Erlangen–Nürnberg
+            under the supervision of Dr. Enrique Zuazua.
+
+            My research lies at the interface of continuous-time models and modern
+            machine learning, with a particular emphasis on developing efficient
+            randomized algorithms—such as random batch methods—for applications ranging
+            from PDEs defined on graphs to optimal control and deep learning.
+
+            I am also interested in bridging theoretical insights with practical
+            implementations through numerical experiments. I am passionate about
+            interdisciplinary problems and strive to connect rigorous mathematical
+            analysis with emerging computational techniques.
+          </div>
+          <div class="buttonGroup">
+            <a href="https://github.com/Martinshs/Martinshs/blob/main/CV_Martin_H_07_04_25.pdf" target="_blank">
+              <button>CV</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Research slide -->
+        <div class="swiper-slide research">
+          <h1 class="heading">Research</h1>
+
+          <div class="publication-box">
+            <h2>Publications</h2>
+            <ul class="publication-list">
+              <li>
+                Hernández, M., Lecaros, R., Zamorano, S. (2023).
+                <em>Averaged turnpike property for differential equations with random
+                constant coefficients</em>. <strong>Mathematical Control and Related Fields</strong>.
+                <a href="https://www.aimsciences.org//article/doi/10.3934/mcrf.2022016"
+                   target="_blank">AIMS</a>
+              </li>
+              <li>
+                Hernández, M., Zuazua, E. (2024).
+                <em>Uniform Turnpike Property and Singular Limits</em>.
+                <strong>Acta Applicandae Mathematicae</strong>.
+                <a href="https://link.springer.com/article/10.1007/s10440-024-00640-7?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20240307&utm_content=10.1007/s10440-024-00640-7"
+                   target="_blank">Springer</a>
+              </li>
+              <li>
+                Hernández, M., Dominguez-Corella, A. (2025).
+                <em>Mini-batch descent in semiflows</em>.
+                <strong>ESAIM-COCV</strong>.
+                <a href="https://www.esaim-cocv.org/articles/cocv/abs/2025/01/cocv240151/cocv240151.html"
+                   target="_blank">COCV</a>
+              </li>
             </ul>
-        </aside>
-        <div class="swiper mySwiper">
-            <div class="SlideContainer swiper-wrapper">
-                <div class="swiper-slide home-slide">
-                    <div class="HomeContent">
-											
-                        <h1>Hi! I'm <span class="stylized-name">Martín</span>,</h1>
-                        <h2>Dynamics &bull; <span class="proffesions">Randomness</span> &bull; Learning</h2>
-                        <p class="heroline">I’m a PhD candidate at FAU Erlangen–Nürnberg, Germany, working at the intersection of control theory, partial differential equations, and deep learning. My research focuses on randomized algorithms for dynamic systems.</p>
-                        
-                    </div>
-									
-                    <div class="SideImg">
-											
-                        <div class="top-right-corner">
-                            <hr class="hr1">
-                            <hr class="hr2">
-                        </div>
-                        <img src="https://dcn.nat.fau.eu/wp-content/uploads/martin-hernandez-pic.png" alt="">
-                        <div class="bottom-left-corner">
-                            <hr class="hr1">
-                            <hr class="hr2">
-                        </div>
-											
-                    </div>
-								
-                    <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i>
-                    </p>
-                </div>
-							
-							
-		  <!-- About me slide -->
-					
-							
-                <div class="swiper-slide aboutme">
+          </div>
 
-                    <h1 class="heading">About Me</h1>
-                    <h3 class="sub-heading">I'm Martín Hernández Salinas</h3>
-                    <div class="aboutme-deatils">
-I am a mathematician with a strong background in partial differential equations, numerical analysis, and control theory. My academic path began in Chile, where I earned both my engineering and master’s degrees in mathematics at USM under the supervision of Dr. Rodrigo Lecaros and Dr. Sebastián Zamorano. I am currently pursuing my PhD at FAU Erlangen–Nürnberg under the supervision of Dr. Enrique Zuazua.
+          <div class="publication-box">
+            <h2>Preprints</h2>
+            <ul class="publication-list">
+              <li>
+                Hernández, M., Lazar, M., Zamorano, S. (2024).
+                <em>Averaged observations and turnpike phenomenon for parameter-dependent systems</em>.
+                <strong>Preprint</strong>.
+                <a href="https://arxiv.org/abs/2404.17455" target="_blank">arXiv:2404.17455</a>
+              </li>
+              <li>
+                Hernández, M., Zuazua, E. (2024).
+                <em>Multi-Classification and Universal Approximation Using Deep Neural Networks</em>.
+                <strong>Preprint</strong>.
+                <a href="https://arxiv.org/abs/2409.06555v1" target="_blank">arXiv:2409.06555v1</a>
+              </li>
+            </ul>
+          </div>
 
-My research lies at the interface of continuous-time models and modern machine learning, with a particular emphasis on developing efficient randomized algorithms—such as random batch methods—for applications ranging from PDEs defined on graphs to optimal control and deep learning.
+          <div class="publication-box">
+            <h2>In Preparation</h2>
+            <ul class="publication-list">
+              <li>
+                Hernández, M., Zuazua, E. (2025). <em>Random Batch Methods for PDE control on graphs</em>.
+                <strong>Preprint</strong>.
+              </li>
+              <li>
+                Hernández, M. (2025). <em>Random domain decomposition for parabolic PDEs</em>.
+                <strong>Preprint</strong>.
+              </li>
+              <li>
+                Hernández, M., Álvarez-López, A. (2024).
+                <em>A mathematical framework for dropout in neural ODEs via random batch methods</em>.
+                <strong>Preprint</strong>.
+              </li>
+            </ul>
+          </div>
 
-I am also interested in bridging theoretical insights with practical implementations through numerical experiments. I am passionate about interdisciplinary problems and strive to connect rigorous mathematical analysis with emerging computational techniques.
-											</div>
-										<div class="buttonGroup">
-<a href="https://github.com/Martinshs/Martinshs/blob/main/CV_Martin_H_07_04_25.pdf" target="_blank">
-  <button>CV</button>
-</a>
-</div>
-											
+          <p class="research-description">
+            For a full list of publications, please visit my
+            <a href="https://scholar.google.com/citations?user=uMn-o4sAAAAJ&hl=en"
+               target="_blank">Google Scholar profile</a>.
+          </p>
+        </div>
 
-                    </div>
-  <!-- Research slide -->
- 
-                <div class="swiper-slide research">
+        <!-- Implementations slide -->
+        <div class="swiper-slide gallery">
+          <h1 class="heading">Implementations</h1>
 
-<h1 class="heading">Research</h1>
+          <div class="project">
+            <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
+            <p class="caption">Example description 1</p>
+          </div>
+          <div class="project">
+            <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
+            <p class="caption">Example description 2</p>
+          </div>
+          <div class="project">
+            <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
+            <p class="caption">Example description 3</p>
+          </div>
+          <div class="project">
+            <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
+            <p class="caption">Example description 4</p>
+          </div>
+          <div class="project">
+            <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
+            <p class="caption">Example description 5</p>
+          </div>
+          <div class="project">
+            <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
+            <p class="caption">Example description 6</p>
+          </div>
 
-<div class="publication-box">
-  <h2>Publications</h2>
-  <ul class="publication-list">
-    <li> Hernández, M., Lecaros, R., Zamorano, S. (2023). <em>Averaged turnpike property for differential equations with random constant coefficients</em>. <strong>Mathematical Control and Related Fields</strong>. <a href="https://www.aimsciences.org//article/doi/10.3934/mcrf.2022016" target="_blank">AIMS</a></li>
-    <li> Hernández, M., Zuazua, E. (2024). <em>Uniform Turnpike Property and Singular Limits</em>. <strong>Acta Applicandae Mathematicae</strong>. <a href="https://link.springer.com/article/10.1007/s10440-024-00640-7?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20240307&utm_content=10.1007/s10440-024-00640-7" target="_blank">Springer</a></li>
-    <li> Hernández, M., Dominguez-Corella, A. (2025). <em>Mini-batch descent in semiflows</em>. <strong>ESAIM-COCV</strong>. <a href="https://www.esaim-cocv.org/articles/cocv/abs/2025/01/cocv240151/cocv240151.html" target="_blank">COCV</a></li>
-  </ul>
-</div>
+          <p class="gallery-description">
+            Find more implementations on my
+            <a href="https://github.com/Martinshs" target="_blank">GitHub</a>.
+          </p>
+        </div>
 
-<div class="publication-box">
-  <h2>Preprints</h2>
-  <ul class="publication-list">
-    <li> Hernández, M., Lazar, M., Zamorano, S. (2024). <em>Averaged observations and turnpike phenomenon for parameter-dependent systems</em>. <strong>Preprint</strong>. <a href="https://arxiv.org/abs/2404.17455" target="_blank">arXiv:2404.17455</a></li>
-    <li> Hernández, M., Zuazua, E. (2024). <em>Multi-Classification and Universal Approximation Using Deep Neural Networks</em>. <strong>Preprint</strong>. <a href="https://arxiv.org/abs/2409.06555v1" target="_blank">arXiv:2409.06555v1</a></li>
-  </ul>
-</div>
+        <!-- Contact Me slide -->
+        <div class="swiper-slide contactMe">
+          <h1 class="heading">Contact Me</h1>
+          <div class="contact-grid">
+            <div class="contactinfo">
+              <p><strong>Email:</strong> <a href="mailto:martin.hernandez@fau.de">martin.hernandez@fau.de</a></p>
+              <p><strong>Office:</strong> Department of Mathematics, FAU Erlangen–Nürnberg, office 03.311</p>
+            </div>
+            <div class="externallinks">
+              <p><strong>Some external links:</strong></p>
+              <ul class="link-icons">
+                <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/martinhernandez" target="_blank">LinkedIn</a></li>
+                <li><i class="fas fa-university"></i> <a href="https://dcn.nat.fau.eu/martin-hernandez/" target="_blank">DCN</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/Martinshs" target="_blank">GitHub</a></li>
+                <li><i class="fab fa-researchgate"></i> <a href="https://www.researchgate.net/profile/Martin-Hernandez-21?ev=hdr_xprf" target="_blank">ResearchGate</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-<div class="publication-box">
-  <h2>In Preparation</h2>
-  <ul class="publication-list">
-    <li> Hernández, M., Zuazua, E. (2025). <em>Random Batch Methods for PDE control on graphs</em>. <strong>Preprint</strong>.</li>
-    <li> Hernández, M. (2025). <em>Random domain decomposition for parabolic PDEs</em>. <strong>Preprint</strong>.</li>
-    <li> Hernández, M., Álvarez-López, A. (2024). <em>A mathematical framework for dropout in neural ODEs via random batch methods</em>. <strong>Preprint</strong>.</li>
-  </ul>
-</div>
-
-<p class="research-description">
-  For a full list of publications, please visit my
-  <a href="https://scholar.google.com/citations?user=uMn-o4sAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.
-</p>
-                    </div>
-                    
-
-
-							
-<div class="swiper-slide gallery">
-  <h1 class="heading">Implementations</h1>
-
-  <div class="project">
-    <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
-    <p class="caption">Example description 1</p>
-  </div>
-
-  <div class="project">
-    <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
-    <p class="caption">Example description 2</p>
-  </div>
-
-  <div class="project">
-    <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
-    <p class="caption">Example description 3</p>
-  </div>
-
-  <div class="project">
-    <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
-    <p class="caption">Example description 4</p>
-  </div>
-
-  <div class="project">
-    <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
-    <p class="caption">Example description 5</p>
-  </div>
-
-  <div class="project">
-    <img src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png" alt="">
-    <p class="caption">Example description 6</p>
-  </div>
-	<p class="gallery-description">
-  Find more implementations on my
-  <a href="https://github.com/Martinshs" target="_blank">GitHub</a>.
-</p>
-</div>
-
-							
-						
-							
-<div class="swiper-slide contactMe">
-  <h1 class="heading">Contact Me</h1>
-
-  <div class="contact-grid">
-    <div class="contactinfo">
-      <p><strong>Email:</strong> <a href="mailto:martin.hernandez@fau.de">martin.hernandez@fau.de</a></p>
-      <p><strong>Office:</strong> Department of Mathematics, FAU Erlangen–Nürnberg, office 03.311</p>
-    </div>
-
-    <div class="externallinks">
-      <p><strong>Some external links:</strong></p>
-      <ul class="link-icons">
-  <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/martinhernandez" target="_blank">LinkedIn</a></li>
-  <li><i class="fas fa-university"></i> <a href="https://dcn.nat.fau.eu/martin-hernandez/" target="_blank">DCN</a></li>
-  <li><i class="fab fa-github"></i> <a href="https://github.com/Martinshs" target="_blank">GitHub</a></li>
-  <li><i class="fab fa-researchgate"></i> <a href="https://www.researchgate.net/profile/Martin-Hernandez-21?ev=hdr_xprf" target="_blank">ResearchGate</a></li>
-</ul>
-
-    </div>
-  </div>
-</div>
-							
-							
-							
-    </main>
-
-			
-			
-			
+      </div> <!-- /.SlideContainer -->
+    </div>   <!-- /.mySwiper -->
+  </main>
+</body>
+</html>
