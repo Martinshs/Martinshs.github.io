@@ -1,13 +1,13 @@
-var swiper = new Swiper(".swiper", {
-  allowTouchMove: false,
-  grabCursor: false,
-  preventClicks: false,
-  preventClicksPropagation: false,
-  noSwipingSelector: 'a',
-  mousewheel: {
-    releaseOnEdges: true
-  }
+const swiper = new Swiper(".swiper", {
+  // … your other settings …
+  allowTouchMove: false,   // still disables drag-swipe if you wish
+  mousewheel: false,       // ← turn off wheel-driven slide change
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
+
 
 
 swiper.on('slideChange', function () {
@@ -33,3 +33,5 @@ function toggleTheme() {
   const mode = document.body.classList.contains('dark-mode') ? "dark" : "light";
   localStorage.setItem("theme", mode);
 }
+
+
