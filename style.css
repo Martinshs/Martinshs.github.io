@@ -467,3 +467,20 @@ aside .Links li.activeLink,
   }
 }
 
+
+
+/* 3. Allow full vertical scroll under the 60px header on mobile */
+@media (max-width: 768px) {
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    height: calc(100vh - 60px);
+  }
+}
+
+
+
+
+
+
+
