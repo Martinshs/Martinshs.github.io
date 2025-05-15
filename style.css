@@ -219,28 +219,6 @@ aside li i {
 }
 
 
-.swiper-slide {
-  width: 100%;
-  background-color: var(--bg-dark-alt);
-  height: 100%;
-  overflow-y: auto;
-}
-
-.swiper-slide::-webkit-scrollbar {
-  width: 15px;
-}
-
-.swiper-slide::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
-  border-radius: 5px;
-}
-
-.swiper-slide::-webkit-scrollbar-thumb {
-  background-color: var(--primary-green);
-  border-radius: 5px;
-  border: 2px solid var(--scrollbar-track);
-}
-
 .aboutme {
   color: var(--text-white);
   padding: 60px;
@@ -467,34 +445,39 @@ aside li i {
 }
 
 
-
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: -1.5rem;
-  background: rgba(0, 0, 0, 0.2); /* semi-transparent */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-white);
-  transition: background 0.3s;
-  z-index: 10;
+/* ensure the container and wrapper each fill the viewport */
+.swiper,
+.swiper-wrapper {
+  height: 100vh;
 }
 
-.swiper-button-prev { left: 1rem; }
-.swiper-button-next { right: 1rem; }
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(0, 0, 0, 0.4);
+/* each slide scrolls only its own content */
+.swiper-slide {
+  height: 100%;              /* already your 100%, but make sure */
+  overflow-y: auto;          /* native vertical scrolling */
+  overscroll-behavior-y: contain;  /* ← prevent “edge” wheel from moving slides */
 }
 
-/* enlarge the arrow icon */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 1.2rem;
+
+
+.swiper-slide {
+  width: 100%;
+  background-color: var(--bg-dark-alt);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.swiper-slide::-webkit-scrollbar {
+  width: 15px;
+}
+
+.swiper-slide::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 5px;
+}
+
+.swiper-slide::-webkit-scrollbar-thumb {
+  background-color: var(--primary-green);
+  border-radius: 5px;
+  border: 2px solid var(--scrollbar-track);
 }
