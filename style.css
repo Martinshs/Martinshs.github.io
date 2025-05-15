@@ -33,6 +33,12 @@ body.dark-mode {
   --scrollbar-track:      #1a1a1a;
 }
 
+.Links li.activeLink,
+.Links li.activeLink i,
+.Links li.activeLink p {
+  color: var(--primary-green) !important;
+}
+
 /* 3. Reset & base */
 * {
   margin: 0;
@@ -444,7 +450,6 @@ aside .Links li.activeLink,
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
     z-index: 1000;
   }
   main {
@@ -461,3 +466,4 @@ aside .Links li.activeLink,
     grid-template-columns: 1fr;
   }
 }
+
