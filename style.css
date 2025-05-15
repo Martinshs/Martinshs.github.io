@@ -440,32 +440,6 @@ aside .Links li.activeLink,
   color: var(--text-white);
 }
 
-/* 15. Mobile responsiveness */
-@media (max-width: 768px) {
-  aside {
-    display: none;
-  }
-  .mobile-nav {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  main {
-    margin-top: 60px;
-  }
-  .mySwiper {
-    width: 100vw;
-  }
-  .gallery {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 
 
