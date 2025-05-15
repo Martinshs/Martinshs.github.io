@@ -463,7 +463,7 @@ aside .Links li p {
   }
   .SideImg {
     width: 80%;
-    margin: 20px auto 0;
+    margin: 20px auto 10px;
   }
   .HomeContent {
     margin-top: 20px;
@@ -472,4 +472,13 @@ aside .Links li p {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .gallery-description {
+    padding: 10px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-light-grey);
+  }
+
+
 }
