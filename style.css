@@ -441,7 +441,18 @@ aside .Links li.activeLink,
 }
 
 
+/* 1. Highlight “Home” on initial load (desktop & mobile) */
+aside .Links li:nth-child(1) i,
+aside .Links li:nth-child(1) p,
+.mobile-nav .Links li:nth-child(1) i {
+  color: var(--primary-green);
+}
 
+/* 2. Keep icon & label green for the active slide (desktop & mobile) */
+.Links li.activeLink i,
+.Links li.activeLink p {
+  color: var(--primary-green);
+}
 
 /* 3. Allow full vertical scroll under the 60px header on mobile */
 @media (max-width: 768px) {
