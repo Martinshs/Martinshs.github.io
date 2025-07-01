@@ -254,6 +254,9 @@ aside .Links li p {
   line-height: 1.6;
   color: var(--text-light-grey);
 }
+.bottonGroup {
+  gap: 30px; /* Espaciado entre botones */
+}
 .buttonGroup button {
   background-color: var(--primary-green);
   color: var(--bg-black);
