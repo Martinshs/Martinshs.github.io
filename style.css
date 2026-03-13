@@ -472,7 +472,7 @@ aside .Links li p {
   line-height: 1.55;
   color: var(--text-light-grey);
 }
-
+  
 .gallery-description {
   grid-column: 1 / -1;
   padding: 10px 0 0 0;
