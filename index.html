@@ -1,419 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Martin Hernandez</title>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Martin Hernandez — Applied Mathematics, Control, Machine Learning, and Reinforcement Learning.">
+<title>Martin Hernandez</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site-header"><div class="site-shell nav">
+<a class="brand" href="index.html">Martin Hernandez</a>
+<button class="menu-button" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html#top">About</a></li>
+<li><a href="publications.html" >Publications</a></li>
+<li><a href="academic-activities.html" >Academic Activities</a></li>
+<li><a href="software.html" >Software</a></li>
+<li><a class="nav-cv" href="https://github.com/Martinshs/Martinshs/blob/main/CV_MARTIN_HS.pdf" target="_blank" rel="noopener">CV</a></li>
+</ul></div></header>
+<main id="top">
+<div class="site-shell"><section class="hero">
+<div>
+<div class="eyebrow">Applied Mathematics · Control · Machine Learning</div>
+<h1>Martin Hernandez</h1>
+<p class="hero-role">Postdoctoral Scholar · Department of Statistics &amp; Data Science · UCLA</p>
+<p class="hero-copy">
+I am an applied mathematician working at the interface of <strong>control theory, reinforcement learning, numerical analysis, and machine learning</strong>.
+My current research focuses on continuous-time reinforcement learning and mean-field control, with broader interests in randomized numerical methods,
+partial differential equations, and the mathematical foundations of learning.
+</p>
+<div class="hero-links">
+<a href="mailto:martinh@g.ucla.edu">Email</a>
+<a href="https://scholar.google.com/citations?user=uMn-o4sAAAAJ&hl=en" target="_blank">Google Scholar</a>
+<a href="https://github.com/Martinshs" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/martinhernandez" target="_blank">LinkedIn</a>
+</div></div>
+<div class="portrait-wrap"><img class="portrait" src="assets/martin-hernandez.png" alt="Portrait of Martin Hernandez"></div>
+</section></div>
 
-  <!-- Font Awesome icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
-  <!-- Swiper core CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-  />
-
-  <!-- Your custom styles -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Swiper JS (must come before your own script) -->
-  <script
-    src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
-    defer
-  ></script>
-
-  <!-- Your page’s behavior -->
-  <script src="script.js" defer></script>
-</head>
-<body>
-
-  <!-- Mobile top navigation (icons only) -->
-  <header class="mobile-nav">
-    <ul class="Links">
-      <li onclick="Navigate(0)"><i class="fa-solid fa-house"></i></li>
-      <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i></li>
-      <li onclick="Navigate(2)"><i class="fa-solid fa-book"></i></li>
-      <li onclick="Navigate(3)"><i class="fa-brands fa-github"></i></li>
-      <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i></li>
-      <li>
-        <button onclick="toggleTheme()" class="theme-button">
-          <i class="fa-solid fa-circle-half-stroke"></i>
-        </button>
-      </li>
-    </ul>
-  </header>
-
-  <main>
-    <!-- Desktop sidebar -->
-    <aside>
-      <ul class="Links">
-        <li onclick="Navigate(0)" class="activeLink">
-          <i class="fa-solid fa-house"></i><p>Home</p>
-        </li>
-        <li onclick="Navigate(1)">
-          <i class="fa-solid fa-user"></i><p>About me</p>
-        </li>
-        <li onclick="Navigate(2)">
-          <i class="fa-solid fa-book"></i><p>Research</p>
-        </li>
-        <li onclick="Navigate(3)">
-          <i class="fa-brands fa-github"></i><p>Implementations</p>
-        </li>
-        <li onclick="Navigate(4)">
-          <i class="fa-solid fa-comments"></i><p>Contact Me</p>
-        </li>
-        <li>
-          <button onclick="toggleTheme()" class="theme-button">
-            <i class="fa-solid fa-circle-half-stroke"></i>
-          </button>
-        </li>
-      </ul>
-    </aside>
-
-    <!-- Swiper container -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-
-        <!-- Home slide -->
-        <div class="swiper-slide home-slide">
-          <div class="HomeContent">
-            <h1>Hi! I'm <span class="stylized-name">Martín</span>,</h1>
-            <h2>Dynamics &bull; <span class="proffesions">Randomness</span> &bull; Learning</h2>
-            <p class="heroline">
-I am a postdoctoral researcher at the University of California, Los Angeles (UCLA), in Prof. Yuhua Zhu’s group. My current work centers on continuous-time reinforcement learning at the interface of mean-field control and partial differential equations. I completed my Ph.D. at Friedrich-Alexander-Universität Erlangen–Nürnberg (FAU), Germany, under Prof. Enrique Zuazua; my previous work covers long-time behavior in optimal control, randomized numerical methods for dynamical systems and PDEs, and the expressivity of deep learning models.            </p>
-          </div>
-          <div class="SideImg">
-            <img src="Martin_Hernandez_oberwolfach.png" alt="Martin_Oberwolfach">
-          </div>
-        </div>
-
-        <!-- About Me slide -->
-        <div class="swiper-slide aboutme">
-  <h1 class="heading">About Me</h1>
-  <h3 class="sub-heading">I'm Martín Hernández Salinas</h3>
-
-  <div class="aboutme-intro">
-    A brief overview of my academic background, current position, and research interests.
-  </div>
-
-  <div class="aboutme-grid">
-    <div class="about-card">
-      <h4>Who am I?</h4>
-      <p>
-        I am a mathematician working at the intersection of partial differential equations,
-        numerical analysis, control theory, deep learning, and reinforcement learning.
-      </p>
-    </div>
-
-    <div class="about-card">
-      <h4>What is my current position?</h4>
-      <p>
-        I am currently a postdoctoral researcher at the University of California, Los Angeles (UCLA),
-        in Prof. Yuhua Zhu’s group, where I work on continuous-time reinforcement learning,
-        particularly in multi-agent systems and mean-field control.
-      </p>
-    </div>
-
-    <div class="about-card">
-      <h4>Where did I study?</h4>
-      <p>
-        My academic path began in Chile, where I earned both my engineering and master’s degrees
-        in mathematics at Universidad Técnica Federico Santa María (USM), under the supervision of
-        Prof. Rodrigo Lecaros and Prof. Sebastián Zamorano.
-      </p>
-    </div>
-
-    <div class="about-card">
-      <h4>What did I do during my Ph.D.?</h4>
-      <p>
-        I earned my Ph.D. (Dr. rer. nat.) at Friedrich-Alexander-Universität Erlangen–Nürnberg (FAU),
-        Germany, under the supervision of Prof. Enrique Zuazua. During this period, I focused on
-        continuous-time models and on efficient randomized algorithms, such as random-batch methods,
-        for PDEs, optimal control, and deep learning.
-      </p>
-    </div>
-
-    <div class="about-card">
-      <h4>What are my research interests?</h4>
-      <p>
-        My current interests include continuous-time reinforcement learning, multi-agent systems,
-  mean-field control theory, partial differential equations, and randomized methods for dynamical systems.
-  More recently, part of my attention has also turned to understanding supervised learning models
-  from a mathematical viewpoint.
-      </p>
-    </div>
- 
-    <div class="about-card">
-      <h4>What motivates my work?</h4>
-      <p>
-       I am naturally driven by curiosity. Despite my strong mathematical training, I remain an engineer at heart, interested not only in rigorous analysis but also in building, testing, and understanding how ideas work in practice. 
-       More than anything, I am motivated by science, discovery, and the bridge between theory and reality.
-      </p>
-    </div>
-  </div>
-
-  <div class="buttonGroup">
-    <a href="https://github.com/Martinshs/Martinshs/blob/main/CV_Martin_HS.pdf" target="_blank">
-      <button>CV</button>
-    </a>
-    <a href="https://github.com/Martinshs/master_thesis/blob/main/Thesis_master_Martin_hernandez_2021.pdf" target="_blank">
-      <button>Master Thesis (Spanish)</button>
-    </a>
-    <a href="https://github.com/Martinshs/phd_thesis/blob/main/Thesis_Martin_Hernandez_update.pdf" target="_blank">
-      <button>PhD Thesis (English)</button>
-    </a>
-  </div>
+<section class="content-section" id="research"><div class="site-shell">
+<div class="section-head">
+<div class="section-kicker">Research</div>
+<div><h2 class="section-title">Mathematical methods for learning and control in continuous time.</h2>
+<p class="section-copy">My work combines analysis, numerical methods, and learning-based approaches, with an emphasis on mathematically structured models and algorithms.</p></div>
 </div>
-
-        <!-- Research slide -->
-<div class="swiper-slide research">
-  <h1 class="heading">Research</h1>
-
-  <div class="research-section">
-    <div class="section-header">
-      <h2>Publications</h2>
-    </div>
-
-    <div class="publication-grid">
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M., Lecaros, R., Zamorano, S. (2023)</p>
-        <h3 class="publication-title">
-          Averaged turnpike property for differential equations with random constant coefficients
-        </h3>
-        <p class="publication-venue">Mathematical Control and Related Fields</p>
-        <a class="publication-link" href="https://www.aimsciences.org//article/doi/10.3934/mcrf.2022016" target="_blank">AIMS</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M., Zuazua, E. (2024)</p>
-        <h3 class="publication-title">
-          Uniform Turnpike Property and Singular Limits
-        </h3>
-        <p class="publication-venue">Acta Applicandae Mathematicae</p>
-        <a class="publication-link" href="https://link.springer.com/article/10.1007/s10440-024-00640-7" target="_blank">Springer</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M., Dominguez-Corella, A. (2025)</p>
-        <h3 class="publication-title">
-          Mini-batch descent in semiflows
-        </h3>
-        <p class="publication-venue">ESAIM-COCV</p>
-        <a class="publication-link" href="https://www.esaim-cocv.org/articles/cocv/abs/2025/01/cocv240151/cocv240151.html" target="_blank">COCV</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M., Lazar, M., Zamorano, S. (2026)</p>
-        <h3 class="publication-title">
-          Turnpike phenomenon for averaged optimal control
-        </h3>
-        <p class="publication-venue">Optimization</p>
-        <a class="publication-link" href="https://www.tandfonline.com/doi/abs/10.1080/02331934.2026.2615776" target="_blank">Optimization</a>
-      </article>
-    </div>
-  </div>
-
-  <div class="research-section">
-    <div class="section-header">
-      <h2>Preprints</h2>
-    </div>
-
-    <div class="publication-grid">
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M., Zuazua, E. (2024)</p>
-        <h3 class="publication-title">
-          Constructive Universal Approximation and Finite Sample Memorization by Narrow Deep ReLU Networks
-        </h3>
-        <p class="publication-venue">Preprint</p>
-        <a class="publication-link" href="https://arxiv.org/abs/2409.06555v2" target="_blank">arXiv:2409.06555v1</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M., Zuazua, E. (2025)</p>
-        <h3 class="publication-title">
-          Random Batch Methods for PDE control on graphs
-        </h3>
-        <p class="publication-venue">Preprint</p>
-        <a class="publication-link" href="https://arxiv.org/abs/2506.11809" target="_blank">arXiv:2506.11809</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M. (2025)</p>
-        <h3 class="publication-title">
-          Random domain decomposition for parabolic PDEs
-        </h3>
-        <p class="publication-venue">Preprint</p>
-        <a class="publication-link" href="https://arxiv.org/abs/2508.21557" target="_blank">arXiv:2508.21557</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Hernández, M., Álvarez-López, A. (2025)</p>
-        <h3 class="publication-title">
-          Convergence, design and training of continuous-time dropout as a random batch method
-        </h3>
-        <p class="publication-venue">Preprint</p>
-        <a class="publication-link" href="https://arxiv.org/abs/2510.13134" target="_blank">arXiv:2510.13134</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Bayraktar, E., Hernández, M., Yan, Q. Zhu, Y. (2026)</p>
-        <h3 class="publication-title">
-          Policy Gradient for Continuous-Time Mean-Field Control.
-        </h3>
-        <p class="publication-venue">Preprint</p>
-        <a class="publication-link" href="https://arxiv.org/abs/2605.20718" target="_blank">arXiv:2605.20718</a>
-      </article>
-
-      <article class="publication-card">
-        <p class="publication-authors">Bayraktar, E., Hernández, M., Yan, Q. Zhu, Y. (2026)</p>
-        <h3 class="publication-title">
-          Mean-Field PhiBE: Continuous-Time Mean-Field Reinforcement Learning from Discrete-Time Data.
-        </h3>
-        <p class="publication-venue">Preprint</p>
-        <a class="publication-link" href="https://arxiv.org/abs/2606.26498" target="_blank">arXiv:2606.26498</a>
-      </article>
-    </div>
-  </div>
-
-  <p class="research-description">
-    For a full list of publications, please visit my
-    <a href="https://scholar.google.com/citations?user=uMn-o4sAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.
-  </p>
-</div>  
-
-        <!-- Implementations slide -->
-        <div class="swiper-slide gallery">
-          <h1 class="heading">Implementations</h1>
-
-          <h2 class="sub-heading">Tutorials</h2>
-          <div class="project">
-            <a href="https://github.com/DCN-FAU-AvH/pinns_heat" target="_blank">
-              <img
-                src="https://raw.githubusercontent.com/DCN-FAU-AvH/pinns_heat/master/results/test_example_2_20231113-230629/0_video_u.gif"
-                alt="PINNs heat GIF"
-              >
-            </a>
-            <p class="caption">
-              PINNs introductory code for the heat equation (PyTorch implementation).
-            </p>
-          </div>
-
-          <div class="project">
-            <a href="https://github.com/Martinshs/tutorial_pytorch/tree/main" target="_blank">
-              <img
-                src="https://raw.githubusercontent.com/Martinshs/tutorial_pytorch/main/gifs/Simulation.gif"
-                alt="PyTorch tutorial simulation"
-              >
-            </a>
-            <p class="caption">
-              Hands-on PyTorch tutorial: build and train your first neural network.
-            </p>
-          </div>
-
-          <div class="project">
-            <a href="https://github.com/Martinshs/code_parabolic/tree/main" target="_blank">
-              <img
-                src="https://raw.githubusercontent.com/Martinshs/code_parabolic/main/images/images_example_3d/plot_superposition167.png"
-                alt="Parabolic PDE on graphs"
-              >
-            </a>
-            <p class="caption">
-              Library to solve Parabolic PDE on graphs.
-            </p>
-          </div>
-
-          <h2 class="sub-heading">Paper Codes</h2>
-          <div class="project">
-            <a href="https://github.com/Martinshs/multiclass_UAT/tree/main" target="_blank">
-              <img
-                src="https://raw.githubusercontent.com/Martinshs/multiclass_UAT/main/example_1.gif"
-                alt="Multiclass UAT GIF"
-              >
-            </a>
-            <p class="caption">
-              Universal binary classification via deep nets—without optimization.
-            </p>
-          </div>
-
-          <div class="project">
-            <a href="https://github.com/Martinshs/Turnpike-property" target="_blank">
-              <img
-                src="https://raw.githubusercontent.com/Martinshs/Turnpike-property/main/Images/plot_1.png"
-                alt="Turnpike property plot"
-              >
-            </a>
-            <p class="caption">
-              Turnpike property: finite-dimensional cases with uncertainty (GEKKO implementation)
-            </p>
-          </div>
-
-          <div class="project">
-            <a href="https://github.com/Martinshs/mini-batch_obtacle_problem/tree/main" target="_blank">
-              <img
-                src="https://raw.githubusercontent.com/Martinshs/mini-batch_obtacle_problem/main/comparation_solutions.gif"
-                alt="Obstacle problem comparison"
-              >
-            </a>
-            <p class="caption">
-              Random minimizing-movement for the obstacle problem (FEniCS implementation).
-            </p>
-          </div>
-
-          <p class="gallery-description">
-            Find more implementations on my
-            <a href="https://github.com/Martinshs" target="_blank">GitHub</a>.
-          </p>
-        </div>
-
-        <!-- Contact Me slide -->
-<div class="swiper-slide contactMe">
-  <h1 class="heading">Contact Me</h1>
-
-  <p class="contact-intro">
-    Please feel free to reach out regarding research, collaborations, or academic discussions.
-  </p>
-
-  <div class="contact-grid">
-    <div class="contact-card contactinfo">
-      <h3>Contact Information</h3>
-
-      <p>
-        <strong>Email UCLA:</strong>
-        <a href="mailto:martinh@g.ucla.edu">martinh[at]g.ucla.edu</a>
-      </p>
-
-      <p>
-        <strong>Email FAU:</strong>
-        <a href="mailto:martin.hernandez@fau.de">martin.hernandez[at]fau.de</a>
-      </p>
-
-      <p>
-        <strong>Office:</strong>
-        Boelter Hall, Room 9413, UCLA
-      </p>
-    </div>
-
-    <div class="contact-card externallinks">
-      <h3>External Links</h3>
-
-      <ul class="link-icons">
-        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/martinhernandez" target="_blank">LinkedIn</a></li>
-        <li><i class="fas fa-university"></i> <a href="https://dcn.nat.fau.eu/martin-hernandez/" target="_blank">DCN</a></li>
-        <li><i class="fab fa-github"></i> <a href="https://github.com/Martinshs" target="_blank">GitHub</a></li>
-        <li><i class="fab fa-researchgate"></i> <a href="https://www.researchgate.net/profile/Martin-Hernandez-21?ev=hdr_xprf" target="_blank">ResearchGate</a></li>
-        <li><i class="fab fa-google"></i> <a href="https://scholar.google.com/citations?user=uMn-o4sAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="research-list">
+<article class="research-item"><div class="research-number">01</div><h3>Continuous-time reinforcement learning</h3><p>Learning control policies for continuous dynamics from discrete-time observations.</p></article>
+<article class="research-item"><div class="research-number">02</div><h3>Mean-field control and reinforcement learning</h3><p>Control and learning for large interacting populations and mean-field systems.</p></article>
+<article class="research-item"><div class="research-number">03</div><h3>Randomized numerical methods</h3><p>Random batch and randomized decomposition methods for dynamical systems and PDEs.</p></article>
+<article class="research-item"><div class="research-number">04</div><h3>Neural network approximation</h3><p>Approximation theory, expressivity, and mathematical questions arising in deep learning.</p></article>
 </div>
-
-      </div>
-    </div>
-  </main>
-
-</body>
-</html>
+</div></section></main><footer><div class="site-shell footer-inner"><div>Martin Hernandez</div><div>Applied Mathematics · Control · Machine Learning</div></div></footer>
+<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("open");}</script></body></html>
